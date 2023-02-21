@@ -40,7 +40,7 @@ public interface BacenResourceI {
                             schema = @Schema(implementation = Void.class))}),
 
     })
-    @GetMapping (value = "/bacen/{cpf}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping (value = "/bacen/cpf/{cpf}", produces = {MediaType.APPLICATION_JSON_VALUE})
     @Valid
     ResponseEntity<List<BacenResponse>> get(
             @Parameter(name = "cpf", description = "Número do CPF do Cliente", required = true)
